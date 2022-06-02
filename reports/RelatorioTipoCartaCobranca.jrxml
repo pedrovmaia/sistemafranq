@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioCartaCobranca" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6e522ba7-b439-47d9-ae9d-7f82b4d15972">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<parameter name="NomeEmpresa" class="java.lang.String"/>
+	<parameter name="EnderecoEmpresa" class="java.lang.String"/>
+	<parameter name="CidadeEmpresa" class="java.lang.String"/>
+	<parameter name="TelefoneEmpresa" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM sysfranquia.sys_tipo_carta_cobranca]]>
+	</queryString>
+	<field name="tipo_carta_cobranca_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_carta_cobranca_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_carta_cobranca"/>
+	</field>
+	<field name="tipo_carta_cobranca_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_carta_cobranca_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_carta_cobranca"/>
+	</field>
+	<field name="tipo_carta_cobranca_status" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_carta_cobranca_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_carta_cobranca"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="111" splitType="Stretch">
+			<image>
+				<reportElement x="15" y="10" width="81" height="51" uuid="93e3190f-81cf-4830-9376-e0247390c1bb"/>
+				<imageExpression><![CDATA["http://www.uploadmobile.com.br/knn/dreamtrip/img/icon_logo.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="83" width="554" height="1" uuid="767cc66f-7e5d-490f-9582-54ba8374491f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="140" y="83" width="264" height="25" uuid="9b06f97d-07d4-4b5f-8284-6655bef2d1c0">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Carta Cobrança]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="110" width="554" height="1" uuid="99957e00-1af3-4604-ba50-c862998d0d21">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="120" y="0" width="424" height="30" uuid="9f438831-a3a4-483f-a957-c301a44c0db4"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NomeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="26" width="424" height="16" uuid="7d937454-7a5a-4966-9ab4-fa4ad3a130c9"/>
+				<textFieldExpression><![CDATA[$P{EnderecoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="43" width="425" height="16" uuid="f515a518-0c03-4fd4-9286-68f0d01b22f4"/>
+				<textFieldExpression><![CDATA[$P{CidadeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="59" width="423" height="19" uuid="98f32f7c-555d-4ed2-9e3d-77fc241f7c42"/>
+				<textFieldExpression><![CDATA[$P{TelefoneEmpresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="fe768e23-bd53-4c28-8e53-68cb83c4b241">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc0ddc75-0d46-4b04-8121-30050dd3ae39"/>
+				</reportElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="20" uuid="1b545fed-048c-4694-b9cf-5ec4f8bb167a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="78bfd219-5d95-4831-b348-c08714903a52"/>
+				</reportElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="20" uuid="b7216a31-caf1-497b-ba42-9211cb8026dd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3468c125-ac41-4bcb-a47e-8b9a168e9f1f"/>
+				</reportElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="1" width="100" height="30" uuid="8e211a4d-e586-464d-a6bf-e117740b01be">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc0ddc75-0d46-4b04-8121-30050dd3ae39"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_carta_cobranca_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="1" width="100" height="30" uuid="9904af1b-ffa9-42e8-93a8-0830f448438f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="78bfd219-5d95-4831-b348-c08714903a52"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_carta_cobranca_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="383" y="1" width="100" height="30" uuid="424ec6e8-0a64-4a78-b3dc-6e878f6306c4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3468c125-ac41-4bcb-a47e-8b9a168e9f1f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_carta_cobranca_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

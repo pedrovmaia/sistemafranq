@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioGrauParentesco" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="322db2a5-13ef-42e1-8984-3c77f7a964b2">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<parameter name="NomeEmpresa" class="java.lang.String"/>
+	<parameter name="EnderecoEmpresa" class="java.lang.String"/>
+	<parameter name="CidadeEmpresa" class="java.lang.String"/>
+	<parameter name="TelefoneEmpresa" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM sysfranquia.sys_grau_parentesco]]>
+	</queryString>
+	<field name="grau_parentesco_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="grau_parentesco_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_grau_parentesco"/>
+	</field>
+	<field name="grau_parentesco_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="grau_parentesco_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_grau_parentesco"/>
+	</field>
+	<field name="grau_parentesco_status" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="grau_parentesco_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_grau_parentesco"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="111" splitType="Stretch">
+			<image>
+				<reportElement x="15" y="10" width="81" height="51" uuid="3957fe97-4eb1-4b96-a131-fc8ef7ba0e98"/>
+				<imageExpression><![CDATA["http://www.uploadmobile.com.br/knn/dreamtrip/img/icon_logo.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="83" width="554" height="1" uuid="a59892f2-2a34-4ddb-8ca1-f107cc91783b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="140" y="83" width="264" height="25" uuid="d228e48a-40fd-4734-9a6b-f0a49e997f29">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Grau de Parentesco]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="110" width="554" height="1" uuid="82e898de-9f10-46f6-a9cf-a00a8e3b6105">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="120" y="0" width="424" height="30" uuid="ea8f92b0-4cab-4fcc-8798-6407ceea8b3d"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NomeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="26" width="424" height="16" uuid="2ba90405-0374-47c4-a6cb-97880af10b3a"/>
+				<textFieldExpression><![CDATA[$P{EnderecoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="43" width="425" height="16" uuid="82bddec1-8340-4e21-a1c7-7635f9e887f7"/>
+				<textFieldExpression><![CDATA[$P{CidadeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="59" width="423" height="19" uuid="c3266216-d1d3-4b06-bd2d-76b45eca7fb6"/>
+				<textFieldExpression><![CDATA[$P{TelefoneEmpresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="caa82a16-0f4c-4a43-b7a4-e96d56cbfd12">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="41c12079-1e0a-4973-83b7-d77e0a0d1291"/>
+				</reportElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="20" uuid="440e0a91-c7d7-4956-a4a7-592d6d30bfc9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="959f9203-a3cb-47b1-807d-f3560ae96cee"/>
+				</reportElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="20" uuid="dd911c1c-2629-4b98-9518-c129f81808b8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="42a06c57-4b5b-431d-b8f9-8befe723b7e5"/>
+				</reportElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="0" width="100" height="30" uuid="aa36fb15-dfb8-4280-b14a-25b437b1c047">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="41c12079-1e0a-4973-83b7-d77e0a0d1291"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{grau_parentesco_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="0" width="100" height="30" uuid="61a4e761-8e28-4d98-9612-59a8def6a26f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="959f9203-a3cb-47b1-807d-f3560ae96cee"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{grau_parentesco_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="382" y="0" width="100" height="30" uuid="bcdab611-acab-4019-9f2d-f52e06cc481f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="42a06c57-4b5b-431d-b8f9-8befe723b7e5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{grau_parentesco_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

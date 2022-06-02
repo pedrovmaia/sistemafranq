@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioCartaQuitacao" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2c148f26-0c67-4f98-a49c-c87e1d7ca764">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<parameter name="NomeEmpresa" class="java.lang.String"/>
+	<parameter name="EnderecoEmpresa" class="java.lang.String"/>
+	<parameter name="CidadeEmpresa" class="java.lang.String"/>
+	<parameter name="TelefoneEmpresa" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM sysfranquia.sys_tipo_carta_quitacao]]>
+	</queryString>
+	<field name="tipo_carta_quitacao_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_carta_quitacao_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_carta_quitacao"/>
+	</field>
+	<field name="tipo_carta_quitacao_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_carta_quitacao_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_carta_quitacao"/>
+	</field>
+	<field name="tipo_carta_quitacao_status" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_carta_quitacao_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_carta_quitacao"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="111" splitType="Stretch">
+			<image>
+				<reportElement x="15" y="10" width="81" height="51" uuid="a22fe534-f7de-4efe-8194-6708151a67e5"/>
+				<imageExpression><![CDATA["http://www.uploadmobile.com.br/knn/dreamtrip/img/icon_logo.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="83" width="554" height="1" uuid="75bc6cef-d272-4560-aedc-28d7c5dcb325">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="140" y="83" width="264" height="25" uuid="829639ca-193c-4ec6-83c9-7c58129d4f0b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Carta de Quitação]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="110" width="554" height="1" uuid="287a10b7-9a28-4a59-b0f9-7cc0e13186e9">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="120" y="0" width="424" height="30" uuid="c7b56342-ae0b-4519-9b53-7db5e1c0b680"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NomeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="26" width="424" height="16" uuid="12f47b35-8adb-4fed-ac81-234fcb0d01b9"/>
+				<textFieldExpression><![CDATA[$P{EnderecoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="43" width="425" height="16" uuid="66e11915-77cd-4616-a1f9-8253d1393090"/>
+				<textFieldExpression><![CDATA[$P{CidadeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="59" width="423" height="19" uuid="0d7dd611-6a4d-4415-9e8a-482bb8666ae7"/>
+				<textFieldExpression><![CDATA[$P{TelefoneEmpresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="20" uuid="07b2d464-c029-4240-bf21-0fa0f7222175">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a99f30fb-6a0e-40f0-893f-74fdabfdb42d"/>
+				</reportElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="20" uuid="7aabcb8c-fde4-4602-b7d6-5ce51280abd5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1a1c637b-2d9d-47f9-96f6-7e79daf14eed"/>
+				</reportElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="20" uuid="b44f514e-41b2-4a94-ab22-c51e0e2d0beb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4df57ed3-d265-411e-aa33-43e670c61615"/>
+				</reportElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="0" width="100" height="30" uuid="36b1f26c-19d7-4f02-abfa-bb3a837e1ae7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a99f30fb-6a0e-40f0-893f-74fdabfdb42d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_carta_quitacao_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="0" width="100" height="30" uuid="b79d0660-cf51-40e9-bf4c-fce244b20e96">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1a1c637b-2d9d-47f9-96f6-7e79daf14eed"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_carta_quitacao_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="383" y="0" width="100" height="30" uuid="58583665-5b21-4128-b2e9-77f40e36f314">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4df57ed3-d265-411e-aa33-43e670c61615"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_carta_quitacao_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

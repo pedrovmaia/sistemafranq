@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioContratos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a73c3adb-4dbc-4b4b-b1cc-d8c98d9bb1f7">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<parameter name="NomeEmpresa" class="java.lang.String"/>
+	<parameter name="EnderecoEmpresa" class="java.lang.String"/>
+	<parameter name="CidadeEmpresa" class="java.lang.String"/>
+	<parameter name="TelefoneEmpresa" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM sysfranquia.sys_tipo_contratos]]>
+	</queryString>
+	<field name="tipo_contrato_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_contrato_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_contratos"/>
+	</field>
+	<field name="tipo_contrato_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_contrato_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_contratos"/>
+	</field>
+	<field name="tipo_contrato_status" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_contrato_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_contratos"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="111" splitType="Stretch">
+			<image>
+				<reportElement x="15" y="10" width="81" height="51" uuid="80bc3451-cd7a-4760-896f-8c365961f9e2"/>
+				<imageExpression><![CDATA["http://www.uploadmobile.com.br/knn/dreamtrip/img/icon_logo.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="83" width="554" height="1" uuid="a1a272b3-7765-486e-ad4f-f0f698e0a0b3">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="140" y="83" width="264" height="25" uuid="32c6c1bf-c6b3-4300-8acf-9b79a6b5041d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Contratos]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="110" width="554" height="1" uuid="184e3cfd-86b9-4d9d-af22-0a559f2d7455">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="120" y="0" width="424" height="30" uuid="74a6efa1-5e8d-4d1b-9486-844c3893c69d"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NomeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="26" width="424" height="16" uuid="9db40e43-d22e-4b26-b9c4-1df27bdeb81c"/>
+				<textFieldExpression><![CDATA[$P{EnderecoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="43" width="425" height="16" uuid="180437e8-4eec-47eb-86c9-f9ad2552ae07"/>
+				<textFieldExpression><![CDATA[$P{CidadeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="59" width="423" height="19" uuid="fc858818-0c17-4589-8d00-e1d228f52a6a"/>
+				<textFieldExpression><![CDATA[$P{TelefoneEmpresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="20" uuid="7f44adad-6bc4-4897-8e61-598e0608a9f5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8dfa5463-4591-4fb9-b572-c0e9ff372cd6"/>
+				</reportElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="20" uuid="6e8113e4-e2e5-4ec7-8bc2-9fe81b4d6cc1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="288f8207-d5a0-47b2-acf1-5c87c9dc764c"/>
+				</reportElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="20" uuid="dbad58b3-090f-47b4-b382-089439eebc42">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="11a7c55a-9107-4bbe-9eec-f9ed2404c2c6"/>
+				</reportElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="0" width="100" height="30" uuid="66f86d43-212e-4dfc-8ff1-1177084f41ce">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8dfa5463-4591-4fb9-b572-c0e9ff372cd6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_contrato_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="0" width="100" height="30" uuid="7a59ac29-082a-4b8a-9094-3e80c0f32037">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="288f8207-d5a0-47b2-acf1-5c87c9dc764c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_contrato_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="382" y="0" width="100" height="30" uuid="cce9a8cf-eb53-451b-9b5f-88dff9eb3e9a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="11a7c55a-9107-4bbe-9eec-f9ed2404c2c6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_contrato_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

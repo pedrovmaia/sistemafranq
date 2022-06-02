@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioContaBancaria" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="52fa7116-74a5-4ab6-a568-0345257af8ec">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<parameter name="NomeEmpresa" class="java.lang.String"/>
+	<parameter name="EnderecoEmpresa" class="java.lang.String"/>
+	<parameter name="CidadeEmpresa" class="java.lang.String"/>
+	<parameter name="TelefoneEmpresa" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM sysfranquia.sys_tipo_conta_bancaria]]>
+	</queryString>
+	<field name="tipo_conta_bancaria_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_conta_bancaria_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_conta_bancaria"/>
+	</field>
+	<field name="tipo_conta_bancaria_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_conta_bancaria_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_conta_bancaria"/>
+	</field>
+	<field name="tipo_conta_bancaria_status" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_conta_bancaria_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_conta_bancaria"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="111" splitType="Stretch">
+			<image>
+				<reportElement x="15" y="10" width="81" height="51" uuid="2376d0cb-83cb-4c59-a0ed-d6d498a28973"/>
+				<imageExpression><![CDATA["http://www.uploadmobile.com.br/knn/dreamtrip/img/icon_logo.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="83" width="554" height="1" uuid="7d3d9525-75a8-44be-980e-386e555fb0c4">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="140" y="83" width="264" height="25" uuid="de2ce13d-ed30-4811-b3cd-5dc324ec3e47">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Conta Bancária]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="110" width="554" height="1" uuid="9c3b9dbf-42dd-4f84-82d8-876f86f953ad">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="120" y="0" width="424" height="30" uuid="0ede15fa-ed0a-41d4-affe-a318f2acb934"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NomeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="26" width="424" height="16" uuid="a2289c0b-2b73-4fd1-b4f4-95cc6ff72d9f"/>
+				<textFieldExpression><![CDATA[$P{EnderecoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="43" width="425" height="16" uuid="320da49a-c1c4-460d-8e67-e3f12ed00953"/>
+				<textFieldExpression><![CDATA[$P{CidadeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="59" width="423" height="19" uuid="a0246561-19a9-48a4-af62-83c133f64f39"/>
+				<textFieldExpression><![CDATA[$P{TelefoneEmpresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="20" uuid="3a219640-0cf5-423d-8453-e947e2854af5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="179cc49e-b028-44f4-92b7-a63c4f63bbfc"/>
+				</reportElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="20" uuid="3f00d944-cc0a-48f3-80b8-197725dd4620">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="55536ece-f3cf-42b8-a9a3-294eaaa33dd8"/>
+				</reportElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="20" uuid="d44cb195-b122-4de5-961b-ce1b8821f908">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3d07c83-f72b-4d42-9f21-a0dcec95ebc8"/>
+				</reportElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="0" width="100" height="30" uuid="4bad87d3-36d5-4e04-a2bd-30114856dbf6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="179cc49e-b028-44f4-92b7-a63c4f63bbfc"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_conta_bancaria_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="0" width="100" height="30" uuid="69cce8cd-56eb-42d3-aaae-5f1846174e3a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="55536ece-f3cf-42b8-a9a3-294eaaa33dd8"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_conta_bancaria_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="383" y="0" width="100" height="30" uuid="b640d194-c217-4951-ab55-f59c6a00afd1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3d07c83-f72b-4d42-9f21-a0dcec95ebc8"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_conta_bancaria_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

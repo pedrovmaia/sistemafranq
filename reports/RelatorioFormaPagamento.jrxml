@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioFormaPagamento" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e2ba8a96-ac46-4b0a-8761-0af5da83eebd">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<parameter name="NomeEmpresa" class="java.lang.String"/>
+	<parameter name="EnderecoEmpresa" class="java.lang.String"/>
+	<parameter name="CidadeEmpresa" class="java.lang.String"/>
+	<parameter name="TelefoneEmpresa" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM sysfranquia.sys_forma_pagamento]]>
+	</queryString>
+	<field name="forma_pagamento_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="forma_pagamento_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_forma_pagamento"/>
+	</field>
+	<field name="forma_pagamento_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="forma_pagamento_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_forma_pagamento"/>
+	</field>
+	<field name="forma_pagamento_status" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="forma_pagamento_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_forma_pagamento"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="111" splitType="Stretch">
+			<image>
+				<reportElement x="15" y="10" width="81" height="51" uuid="c0d683b8-329c-4dbf-bdce-2f0700ed88c1"/>
+				<imageExpression><![CDATA["http://www.uploadmobile.com.br/knn/dreamtrip/img/icon_logo.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="83" width="554" height="1" uuid="a7d8d397-9302-466f-beac-daf8e97fa495">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="140" y="83" width="264" height="25" uuid="e6f6da9e-06a4-459e-8b80-145125a2204a">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Formas de Pagamentos]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="110" width="554" height="1" uuid="08f87d8f-8565-413c-8da6-663ab3644da7">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="120" y="0" width="424" height="30" uuid="d46aa899-24ca-4eda-9915-5c832f51d55a"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NomeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="26" width="424" height="16" uuid="00e12017-adcc-457f-84ab-ccf267c14240"/>
+				<textFieldExpression><![CDATA[$P{EnderecoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="43" width="425" height="16" uuid="0895e82e-ec90-4893-bd03-ee1166c2297b"/>
+				<textFieldExpression><![CDATA[$P{CidadeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="59" width="423" height="19" uuid="188afa3f-d284-4979-ba6e-0f4ba6d78f57"/>
+				<textFieldExpression><![CDATA[$P{TelefoneEmpresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="38" height="20" uuid="d23669ab-683b-4fa6-aeed-76f9a1fcf134">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8c6d21ca-d6f2-4ef4-801e-b50d0f4cfb20"/>
+				</reportElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="20" uuid="d3fecc69-05aa-4e74-9594-f92ac57e9515">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4aad0876-3342-462f-b07e-3cc7669ceddf"/>
+				</reportElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="20" uuid="9d3cbc57-fe09-452b-9001-09d857ef4cf5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="232f4754-d03d-4093-9f13-73a0f8434c5f"/>
+				</reportElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="0" width="100" height="30" uuid="c9e19a79-3897-4bf6-8386-91684163d092">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8c6d21ca-d6f2-4ef4-801e-b50d0f4cfb20"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{forma_pagamento_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="382" y="0" width="100" height="30" uuid="9f5b37ac-a58d-458e-b827-598f5036af55">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4aad0876-3342-462f-b07e-3cc7669ceddf"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{forma_pagamento_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="0" width="100" height="30" uuid="3f052532-96e0-4cc0-ad29-d47c7d0d9149">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="232f4754-d03d-4093-9f13-73a0f8434c5f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{forma_pagamento_nome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

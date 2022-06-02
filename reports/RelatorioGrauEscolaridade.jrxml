@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioGrauEscolaridade" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="13580df2-ee79-4daf-bfce-628b23344a05">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<parameter name="NomeEmpresa" class="java.lang.String"/>
+	<parameter name="EnderecoEmpresa" class="java.lang.String"/>
+	<parameter name="CidadeEmpresa" class="java.lang.String"/>
+	<parameter name="TelefoneEmpresa" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM sysfranquia.sys_grau_escolaridade]]>
+	</queryString>
+	<field name="grau_escolaridade_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="grau_escolaridade_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_grau_escolaridade"/>
+	</field>
+	<field name="grau_escolaridade_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="grau_escolaridade_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_grau_escolaridade"/>
+	</field>
+	<field name="grau_escolaridade_status" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="grau_escolaridade_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_grau_escolaridade"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="111" splitType="Stretch">
+			<image>
+				<reportElement x="15" y="10" width="81" height="51" uuid="35d0aa67-0881-4b24-81b8-a07bb2ba3b75"/>
+				<imageExpression><![CDATA["http://www.uploadmobile.com.br/knn/dreamtrip/img/icon_logo.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="83" width="554" height="1" uuid="a46abe3c-c826-4797-9221-0f40b6f6b6ab">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="140" y="83" width="264" height="25" uuid="ad2073ac-7267-4734-ac00-a0a5fd26277f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Grau de Escolaridade]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="110" width="554" height="1" uuid="88ce9bd4-fb40-45cc-911d-043b382a8195">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="120" y="0" width="424" height="30" uuid="9125c17a-ff88-491d-9677-6fd37aeedce3"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NomeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="26" width="424" height="16" uuid="518c0d06-f866-4a46-9cef-9e02cc4019d2"/>
+				<textFieldExpression><![CDATA[$P{EnderecoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="43" width="425" height="16" uuid="0fd5039d-1649-40fb-a3c3-408887db990b"/>
+				<textFieldExpression><![CDATA[$P{CidadeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="59" width="423" height="19" uuid="47fd8634-2445-4c33-8dbe-d301e34857cf"/>
+				<textFieldExpression><![CDATA[$P{TelefoneEmpresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="20" uuid="200a3c69-18b9-4048-ba82-a794449f4598">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2ba15f40-4fea-46a3-ad1b-5f3e04aba69b"/>
+				</reportElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="20" uuid="9ff35a9d-1909-4168-8d69-efa9ac19b1f6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1bfaea3c-2c47-442c-8782-da4c98051ab8"/>
+				</reportElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="20" uuid="e10484a1-285f-4947-91fc-d8cac336152f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="540b96d8-57f0-4aed-8f83-47dcb645cea3"/>
+				</reportElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="0" width="100" height="30" uuid="633d5cde-2d26-492e-91d5-866acf70905b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2ba15f40-4fea-46a3-ad1b-5f3e04aba69b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{grau_escolaridade_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="0" width="100" height="30" uuid="ae4d15e6-a419-41b2-a84f-595a0e7ab31b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1bfaea3c-2c47-442c-8782-da4c98051ab8"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{grau_escolaridade_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="382" y="0" width="100" height="30" uuid="34066ead-2522-458f-b67c-edd12702a591">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="540b96d8-57f0-4aed-8f83-47dcb645cea3"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{grau_escolaridade_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

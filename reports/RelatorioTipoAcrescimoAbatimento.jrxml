@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioAcrescimoAbatimento" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ea56f84c-b2c6-419f-a518-1bc308243870">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<parameter name="NomeEmpresa" class="java.lang.String"/>
+	<parameter name="EnderecoEmpresa" class="java.lang.String"/>
+	<parameter name="CidadeEmpresa" class="java.lang.String"/>
+	<parameter name="TelefoneEmpresa" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM sysfranquia.sys_tipo_acrescimo_abatimento]]>
+	</queryString>
+	<field name="tipo_acrescimo_abatimento_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_acrescimo_abatimento_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_acrescimo_abatimento"/>
+	</field>
+	<field name="tipo_acrescimo_abatimento_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_acrescimo_abatimento_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_acrescimo_abatimento"/>
+	</field>
+	<field name="tipo_acrescimo_abatimento_status" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_acrescimo_abatimento_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_acrescimo_abatimento"/>
+	</field>
+	<field name="tipo_acrescimo_abatimento_tipo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_acrescimo_abatimento_tipo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_tipo_acrescimo_abatimento"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="111" splitType="Stretch">
+			<image>
+				<reportElement x="15" y="10" width="81" height="51" uuid="d177467d-5dd8-4f78-80fa-ab1eefe2f6f6"/>
+				<imageExpression><![CDATA["http://www.uploadmobile.com.br/knn/dreamtrip/img/icon_logo.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="83" width="554" height="1" uuid="c31b2b05-7330-47ec-87c2-9fd428116406">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="140" y="83" width="360" height="25" uuid="e7b78c0b-e391-4b8c-9f9e-9fe222e62fc1">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Acréscimo de Abatimento]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="110" width="554" height="1" uuid="fd6e34c6-4423-4537-992c-1827902e29cb">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="120" y="0" width="424" height="30" uuid="9a73bc45-3b40-41df-b22b-449254815527"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NomeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="26" width="424" height="16" uuid="71ce079c-f3a2-4cc9-ab78-243fc4fc57e3"/>
+				<textFieldExpression><![CDATA[$P{EnderecoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="43" width="425" height="16" uuid="5dd5e16c-6b3c-498a-b449-044bd7fbf98e"/>
+				<textFieldExpression><![CDATA[$P{CidadeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="59" width="423" height="19" uuid="007bbfac-3b96-46cc-8f7f-60dd788795ea"/>
+				<textFieldExpression><![CDATA[$P{TelefoneEmpresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="4fd77ca1-b414-4a89-acfa-7ae17a7f0c58">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="689470ce-832d-4d90-8c4c-a0cbb1892217"/>
+				</reportElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="0" width="100" height="20" uuid="501d6a00-e73b-4cbb-9755-4885b36f6f76">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f5ecacbc-a704-4fb7-bdcb-b4714a30a2d1"/>
+				</reportElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20" uuid="2db9adfa-3bab-4acf-9ca4-4f41ca87f3b9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3a5bba1b-d14e-416f-a977-5397189c67b5"/>
+				</reportElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="0" width="100" height="20" uuid="f7abe6c0-cb19-4946-880b-35c0f85ce2f7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="74fc9a3d-51fd-41e8-8676-6461dafdfd86"/>
+				</reportElement>
+				<text><![CDATA[TIPO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="2eb18c8b-da9f-439b-969b-2118638f7020">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="689470ce-832d-4d90-8c4c-a0cbb1892217"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_acrescimo_abatimento_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="100" height="30" uuid="55d546de-a5c8-4743-add8-82626784b43b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f5ecacbc-a704-4fb7-bdcb-b4714a30a2d1"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_acrescimo_abatimento_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="30" uuid="9a763722-0361-4561-b0d2-ef42e95a42a1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3a5bba1b-d14e-416f-a977-5397189c67b5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_acrescimo_abatimento_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="0" width="100" height="30" uuid="83d84e2f-d3e1-4358-b672-24e322413388">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="74fc9a3d-51fd-41e8-8676-6461dafdfd86"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tipo_acrescimo_abatimento_tipo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

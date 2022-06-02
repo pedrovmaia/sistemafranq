@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioEstagioTurma" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="76178cdb-e5d9-43f3-a38a-14596d0a5cb8">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<parameter name="NomeEmpresa" class="java.lang.String"/>
+	<parameter name="EnderecoEmpresa" class="java.lang.String"/>
+	<parameter name="CidadeEmpresa" class="java.lang.String"/>
+	<parameter name="TelefoneEmpresa" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM sysfranquia.sys_estagio_projeto]]>
+	</queryString>
+	<field name="estagio_projeto_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="estagio_projeto_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_estagio_projeto"/>
+	</field>
+	<field name="estagio_projeto_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="estagio_projeto_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_estagio_projeto"/>
+	</field>
+	<field name="estagio_projeto_status" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="estagio_projeto_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sys_estagio_projeto"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="111" splitType="Stretch">
+			<image>
+				<reportElement x="15" y="10" width="81" height="51" uuid="f8a5fff7-3ade-41d6-8321-3980b92862fb"/>
+				<imageExpression><![CDATA["http://www.uploadmobile.com.br/knn/dreamtrip/img/icon_logo.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="83" width="554" height="1" uuid="415bb782-7c14-4de8-96c0-0cf22d5eda46">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="140" y="83" width="264" height="25" uuid="c40e90f8-0d40-41e3-9583-84a9b82adef5">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Estágio de Turma]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="110" width="554" height="1" uuid="231756b9-ca90-408b-8756-58b63a7718d7">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="120" y="0" width="424" height="30" uuid="04c84444-7ce7-40c2-bf8d-c087a1bcbd2e"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NomeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="26" width="424" height="16" uuid="8f881328-269a-4792-ad27-d819452228f7"/>
+				<textFieldExpression><![CDATA[$P{EnderecoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="43" width="425" height="16" uuid="f4175b14-574f-477d-86c8-797bfbfe034b"/>
+				<textFieldExpression><![CDATA[$P{CidadeEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="59" width="423" height="19" uuid="a686085c-989e-4dd8-8f8b-f29c76444706"/>
+				<textFieldExpression><![CDATA[$P{TelefoneEmpresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="26d9499b-3687-49b0-ba94-c19014ed4e65">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fc77cfc9-4ac4-41e4-858b-90aa950cee30"/>
+				</reportElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="20" uuid="f65636c8-1eaa-4d18-8542-c48494cd97a8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="737b519c-c57e-4876-bd2f-0dba26a92e73"/>
+				</reportElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="-1" width="100" height="21" uuid="e3c13dbb-91d7-40c3-826b-f8e7aa1b990d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="122aceeb-e85f-4dfa-a909-0b6a21a7ceb4"/>
+				</reportElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="0" width="100" height="30" uuid="76f2bab4-8e3a-4143-937b-1cf8e0026e20">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fc77cfc9-4ac4-41e4-858b-90aa950cee30"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{estagio_projeto_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="0" width="100" height="30" uuid="38afb70e-dc5f-4f3f-b448-bc1b9afb38fa">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="737b519c-c57e-4876-bd2f-0dba26a92e73"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{estagio_projeto_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="383" y="0" width="100" height="30" uuid="417d5778-21dd-4a69-82e9-1aae397654f3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="122aceeb-e85f-4dfa-a909-0b6a21a7ceb4"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{estagio_projeto_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
